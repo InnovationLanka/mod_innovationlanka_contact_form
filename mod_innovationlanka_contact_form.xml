@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+    type="module"
+    version="3.0"
+    client="site"
+    method="upgrade">
+    <name>mod_innovationlanka_contact_form</name>
+    <author>innovationlanka.com</author>
+    <creationDate>14/05/2015</creationDate>
+    <copyright>Copyright (C) 2016. All Rights Reserved.</copyright>
+    <license>GNU General Public License version 2 or later; </license>
+    <authorEmail>innovationlanka.com</authorEmail>
+    <authoralt>http://www.innovationlanka.com</authoralt>
+    <version>1.0.0</version>
+    <description>MOD_INNOVATIONLANKA_CONTACT_FORM_XML_DESCRIPTION</description>
+    <files>	
+        <filename module="mod_innovationlanka_contact_form">mod_innovationlanka_contact_form.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_innovationlanka_contact_form.php</filename>
+        <filename>mod_innovationlanka_contact_form.xml</filename>
+        <filename>helper.php</filename>
+      
+        <folder>language</folder>
+        <folder>tmpl</folder>    
+    </files>
+	
+    <languages>	
+        <language tag="en-GB">language/en-GB/en-GB.mod_innovationlanka_contact_form.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_innovationlanka_contact_form.sys.ini</language>
+	
+    </languages>
+		
+    <config>
+        <fields name="params">
+            
+            <fieldset
+                name="basic">
+                
+                <field
+                    name="contactform_title_show"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CONTACT_FORM_TITLE_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CONTACT_FORM_TITLE_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="contactform_title"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CONTACT_FORM_TITLE_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CONTACT_FORM_TITLE_DESC"
+                    maxlength="50"
+                    default="Your Contact Form Name"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="bypass_default_receiver_email"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_BYPASS_DEFAULT_RECEIVER_EMAIL_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_BYPASS_DEFAULT_RECEIVER_EMAIL_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                
+                <field
+                    name="contact_us_to"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CONTACT_US_TO_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CONTACT_US_TO_DESC"
+                    maxlength="50"
+                    default="admin@testmail.com"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="email_cc"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_CC_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_CC_DESC"
+                    maxlength="50"
+                    default="cc@testmail.com"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="email_bcc"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_BCC_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_BCC_DESC"
+                    maxlength="50"
+                    default="bcc@testmail.com"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                
+                
+                
+                <field
+                    name="show_email_address_label"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_LABEL_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_LABEL_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="email_label"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_LABEL_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_LABEL_DESC"
+                    maxlength="20"
+                    default="Your E-Mail"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="email_address_placeholder"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADDRESS_PLACEHOLDER_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADDRESS_PLACEHOLDER_DESC"
+                    maxlength="20"
+                    default="Your E-Mail"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="email_min_length"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_MIN_LENGTH_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_MIN_LENGTH_DESC"
+                    maxlength="3"
+                    default="5"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="email_max_length"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_MAX_LENGTH_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_MAX_LENGTH_DESC"
+                    maxlength="3"
+                    default="300"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="email_required"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_REQUIRED_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_REQUIRED_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="show_email_address"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="show_name_label"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_LABEL_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_LABEL_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="name_label"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_LABEL_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_LABEL_DESC"
+                    maxlength="20"
+                    default="Your Name"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="name_placeholder"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_PLACEHOLDER_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_PLACEHOLDER_DESC"
+                    maxlength="20"
+                    default="Your Name"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="name_min_length"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_MIN_LENGTH_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_MIN_LENGTH_DESC"
+                    maxlength="3"
+                    default="5"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="name_max_length"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_MAX_LENGTH_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_MAX_LENGTH_DESC"
+                    maxlength="3"
+                    default="300"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="name_required"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_REQUIRED_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_REQUIRED_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="show_name"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="show_subject_label"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_LABEL_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_LABEL_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="subject_label"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_LABEL_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_LABEL_DESC"
+                    maxlength="20"
+                    default="Subject"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="subject_placeholder"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_PLACEHOLDER_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_PLACEHOLDER_DESC"
+                    maxlength="20"
+                    default="Subject"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="subject_min_length"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_MIN_LENGTH_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_MIN_LENGTH_DESC"
+                    maxlength="3"
+                    default="5"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="subject_max_length"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_MAX_LENGTH_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_MAX_LENGTH_DESC"
+                    maxlength="3"
+                    default="300"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="subject_required"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_REQUIRED_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_REQUIRED_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="show_subject"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="show_telephone_label"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_LABEL_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_LABEL_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="telephone_label"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_LABEL_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_LABEL_DESC"
+                    maxlength="20"
+                    default="Your Telephone"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="telephone_placeholder"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_PLACEHOLDER_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_PLACEHOLDER_DESC"
+                    maxlength="20"
+                    default="Your Telephone"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="telephone_min_length"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_MIN_LENGTH_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_MIN_LENGTH_DESC"
+                    maxlength="3"
+                    default="5"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="telephone_max_length"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_MAX_LENGTH_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_MAX_LENGTH_DESC"
+                    maxlength="3"
+                    default="300"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="telephone_required"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_REQUIRED_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_REQUIRED_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="show_telephone"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="show_message_label"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_LABEL_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_LABEL_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="message_label"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_LABEL_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_LABEL_DESC"
+                    maxlength="20"
+                    default="Your Message"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="message_placeholder"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_PLACEHOLDER_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_PLACEHOLDER_DESC"
+                    maxlength="20"
+                    default="Your Message"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="message_min_length"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_MIN_LENGTH_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_MIN_LENGTH_DESC"
+                    maxlength="3"
+                    default="5"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="message_max_length"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_MAX_LENGTH_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_MAX_LENGTH_DESC"
+                    maxlength="4"
+                    default="300"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="message_required"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_REQUIRED_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_REQUIRED_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="show_message"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="show_send_copy_to_me"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SEND_COPY_TO_ME_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SEND_COPY_TO_ME_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                
+                <field
+                    name="send_copy_to_me_label"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SEND_COPY_TO_ME_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SEND_COPY_TO_ME_DESC"
+                    maxlength="50"
+                    default="Send copy to yourself"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="captcha_show"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CAPTCHA_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CAPTCHA_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                
+                <field
+                    name="show_reset_button"
+                    type="checkbox"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_RESET_BUTTON_SHOW_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_RESET_BUTTON_SHOW_DESC"
+                    value="TRUE"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="reset_button_label"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_RESET_BUTTON_LABEL_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_RESET_BUTTON_LABEL_DESC"
+                    maxlength="20"
+                    default="Reset"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="submit_button_label"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBMIT_BUTTON_LABEL_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBMIT_BUTTON_LABEL_DESC"
+                    maxlength="20"
+                    default="Send Message"
+                    filter="safehtml"
+                    class="inputbox"
+                />
+                
+                <field
+                    name="email_template"
+                    type="editor"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_TEMPLATE_LABEL"
+                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_TEMPLATE_DESC"
+                    filter="safehtml"
+                />
+            </fieldset>
+
+
+            <fieldset name="mail">
+
+                    <field type="spacer" name="myspacerbasic" hr="true" />
+
+                    <field type="spacer" name="labelbasicadvanceemail" class="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_BASIC_TEMPLATE_START"/>
+
+                    <field addfieldpath="/modules/mod_innovationlanka_contact_form/assets/fields" name="title" type="Mailtemplate" label="Mail template" description=""   />
+
+
+                    <field
+                    name="email_template_title"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_TITLE"
+                    description="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_TITLE_DESC"
+                    default="Contact Message Email"
+                    filter="safehtml"
+                    class="inputbox"
+                     />
+
+                    <field
+                    name="email_template_call_admin"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_CALL_ADMIN"
+                    description="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_CALL_ADMIN_DESC"
+                    default="Dear Admin"
+                    filter="safehtml"
+                    class="inputbox"
+                     />
+
+
+                    <field
+                    name="email_template_thank_admin"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_THANK_ADMIN"
+                    description="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_THANK_ADMIN_DESC"
+                    default="Best regards,"
+                    filter="safehtml"
+                    class="inputbox"
+                     />
+
+                    <field
+                    name="email_template_footer_des"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_FOOTER"
+                    description="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_FOOTER_DESC"
+                    default="Use of this website constitutes acceptance of the your site Terms and Conditions and Privacy Policy© Copyright 2016 - your company - All rights reserved."
+                    filter="safehtml"
+                    class="inputbox"
+                     />
+
+                    <field
+                    name="email_template_header_color"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_HEADER_COLOR"
+                    description="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_HEADER_COLOR_DESC"
+                    default="#FF2D7E"
+                    filter="safehtml"
+                    class="inputbox"
+                     />
+
+                    <field
+                    name="email_template_body_color"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_BODY_COLOR"
+                    description="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_BODY_COLOR_DESC"
+                    default="#E6E6FA"
+                    filter="safehtml"
+                    class="inputbox"
+                     />
+
+                    <field
+                    name="email_template_footer_color"
+                    type="text"
+                    label="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_FOOTER_COLOR"
+                    description="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_FOOTER_COLOR_DESC"
+                    default="#FF2D7E"
+                    filter="safehtml"
+                    class="inputbox"
+                     />
+
+
+                     <field type="spacer" name="myspacer" hr="true" />
+
+                    <field type="spacer" name="labeladvanceemail" class="text"
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADVANCE_TEMPLATE_START"
+                    />
+
+                     <field name="select_advance_email_template" type="checkbox" label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADVANCE_TEMPLATE_SELECT" value="1" default="0" />
+
+                    <field
+                        name="advance_email_template"
+                        type="editor"
+                        label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADVANCE_TEMPLATE_LABEL"
+                        default="
+                        &lt;p&gt; @#contact_us_subject  &lt;/p&gt;
+                        &lt;p&gt;   Dear Admin  &lt;/p&gt;
+                        &lt;p&gt;  @#contact_us_message   &lt;/p&gt;
+                        &lt;p&gt; Best regards,  &lt;/p&gt;
+                        &lt;p&gt; @#contact_us_username  &lt;/p&gt;
+                        &lt;p&gt; @#contact_us_telephone  &lt;/p&gt;
+
+                        "
+                        description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADVANCE_TEMPLATE_DESC"
+                        filter="safehtml"
+                    />
+
+                        <field
+                        name="advance_email_parameters"
+                        type="editor"
+                        label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADVANCE_TEMPLATE_PARAMETERS"
+                        default="
+                        &lt;p&gt; 1 Subject  &lt;/p&gt;
+                        &lt;p&gt; 2 Message &lt;/p&gt;
+                        &lt;p&gt; 3 Username   &lt;/p&gt;
+                        &lt;p&gt; 4 Phone  &lt;/p&gt;
+                        "
+                        description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADVANCE_TEMPLATE_DESC"
+                        filter="safehtml"
+                    />
+
+            </fieldset>
+			
+            <fieldset
+                name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+					
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                    name="cache"
+                    type="list"
+                    default="1"
+                    class="btn-group"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="static">
+                    <option
+                        value="static">
+                    </option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
