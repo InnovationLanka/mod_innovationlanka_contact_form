@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 ; mod_innovationlanka_contact_form
 ; Copyright (C) 2016 InnovationLanka. All rights reserved.
 ; Note : All files need to be saved as UTF-8 - No BOM
