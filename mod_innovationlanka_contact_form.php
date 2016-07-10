@@ -20,7 +20,14 @@ $ext_id = "mod_" . $module->id;
 
 $ModuleId = $module->id;
 $params_json_decode = json_decode($module->params);
-//$event_data= InnovationlankaContactFrom::getData($module);
+
+
+
+
+/*$_getParams= modInnovationlankaContactFormHelper::_getParams();
+var_dump($_getParams);*/
+
+
 
 $email_label = $params->get('email_label');
 $email_min_length = $params->get('email_min_length');
@@ -48,6 +55,23 @@ $message_max_length = $params->get('message_max_length');
 $message_required = $params->get('message_required');
 
 $submit_button_label = $params->get('submit_button_label');
+
+
+
+/*
+$layout= $params->get('layout');
+if($layout_change_param==1){
+require JModuleHelper::getLayoutPath('mod_innovationlanka_contact_form',$params->get('layout', 'templateOne'));
+}else if($layout_change_param==2){
+require JModuleHelper::getLayoutPath('mod_innovationlanka_contact_form',$params->get('layout', 'templateOne'));
+}else{
+require JModuleHelper::getLayoutPath('mod_innovationlanka_contact_form', $params->get('layout', 'templateTwo'));	
+}*/
+
+
+
+
+
 
 require JModuleHelper::getLayoutPath('mod_innovationlanka_contact_form', $params->get('layout', 'default'));
 

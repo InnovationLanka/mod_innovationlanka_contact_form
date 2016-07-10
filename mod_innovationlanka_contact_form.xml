@@ -33,17 +33,28 @@
     <config>
         <fields name="params">
             
+            
+
+
             <fieldset
                 name="basic">
-                
-                <field
-                    name="contactform_title_show"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CONTACT_FORM_TITLE_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CONTACT_FORM_TITLE_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+              
+
+
+<field type="spacer" name="desc1" label="&lt;b&gt;Basic Configurations&lt;/b&gt;&lt;hr/&gt;" />
+
+
+			<field
+			name="contactform_title_show"
+			type="radio"
+			default="0"
+			label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CONTACT_FORM_TITLE_SHOW_LABEL"
+			description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CONTACT_FORM_TITLE_SHOW_DESC"
+		class="btn-group btn-group-yesno"
+			>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+			</field>
                 
                 <field
                     name="contactform_title"
@@ -55,15 +66,21 @@
                     filter="safehtml"
                     class="inputbox"
                 />
+
+
+
                 
-                <field
-                    name="bypass_default_receiver_email"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_BYPASS_DEFAULT_RECEIVER_EMAIL_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_BYPASS_DEFAULT_RECEIVER_EMAIL_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+				<field
+				name="bypass_default_receiver_email"
+				type="radio"
+				default="0"
+				label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_BYPASS_DEFAULT_RECEIVER_EMAIL_LABEL"
+				description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_BYPASS_DEFAULT_RECEIVER_EMAIL_DESC"
+			class="btn-group btn-group-yesno"
+				>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+				</field>
                 
                 
                 <field
@@ -99,17 +116,331 @@
                     class="inputbox"
                 />
                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <field type="spacer" name="myspacer" hr="true" />
+<field type="spacer" name="myspacer1" label="Advanced parameters" />
+<field type="spacer" name="myspacer11" class="text"
+label="PLG_TINY_FIELD_NAME_EXTENDED_LABEL"
+/>
+<field type="spacer" name="myspacer2" label="&lt;hr/&gt;More parameters" />
+ -->
+
+
+
+<field type="spacer" name="desc2" label="&lt;hr/&gt; &lt;b&gt; Show/Hide Front-end Form Elements &lt;/b&gt;&lt;hr/&gt;" />
+
+
+
+
+    <field
+    name="show_email_address_label"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_LABEL_SHOW_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_LABEL_SHOW_DESC"
+    class="btn-group btn-group-yesno"
+    >
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+    <field
+    name="show_email_address"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_SHOW_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_SHOW_DESC"
+    class="btn-group btn-group-yesno"
+    > 
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+    <field
+    name="show_name_label"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_LABEL_SHOW_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_LABEL_SHOW_DESC"
+    class="btn-group btn-group-yesno"
+    > 
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+    <field
+    name="show_name"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_SHOW_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_SHOW_DESC"
+    class="btn-group btn-group-yesno"
+    >  
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+
+    <field
+    name="show_subject"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_SHOW_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_SHOW_DESC"
+    class="btn-group btn-group-yesno"
+    >  
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+    <field
+    name="show_telephone_label"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_LABEL_SHOW_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_LABEL_SHOW_DESC"
+    class="btn-group btn-group-yesno"
+    > 
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+
+    <field
+    name="show_telephone"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_SHOW_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_SHOW_DESC"
+    class="btn-group btn-group-yesno"
+    >  
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+
+    <field
+    name="show_message_label"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_LABEL_SHOW_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_LABEL_SHOW_DESC"
+    class="btn-group btn-group-yesno"
+    >  
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+    <field
+    name="show_message"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_SHOW_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_SHOW_DESC"
+    class="btn-group btn-group-yesno"
+    > 
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+    <field
+    name="show_send_copy_to_me"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SEND_COPY_TO_ME_SHOW_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SEND_COPY_TO_ME_SHOW_DESC"
+    class="btn-group btn-group-yesno"
+    > 
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+    <field
+    name="show_reset_button"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_RESET_BUTTON_SHOW_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_RESET_BUTTON_SHOW_DESC"
+    class="btn-group btn-group-yesno"
+    >  
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+		<field
+		name="captcha_show"
+		type="radio"
+		default="0"
+		label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CAPTCHA_SHOW_LABEL"
+		description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CAPTCHA_SHOW_DESC"
+		class="btn-group btn-group-yesno"
+		>
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+		</field>
+
+		<field
+		name="show_subject_label"
+		type="radio"
+		default="0"
+		label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_LABEL_SHOW_LABEL"
+		description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_LABEL_SHOW_DESC"
+		class="btn-group btn-group-yesno"
+		>
+		<option value="1">JYES</option>
+		<option value="0">JNO</option>
+		</field>
+
+
+
+
+
+
+
+
+<field type="spacer" name="desc3" label="&lt;hr/&gt; &lt;b&gt; Enable/Disable Required Fields &lt;/b&gt;&lt;hr/&gt;" />
+
+
+
+    <field
+    name="email_required"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_REQUIRED_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_REQUIRED_DESC"
+    class="btn-group btn-group-yesno"
+    >  
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+    <field
+    name="name_required"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_REQUIRED_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_REQUIRED_DESC"
+    class="btn-group btn-group-yesno"
+    >  
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+    <field
+    name="subject_required"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_REQUIRED_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_REQUIRED_DESC"
+    class="btn-group btn-group-yesno"
+    >  
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+    <field
+    name="telephone_required"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_REQUIRED_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_REQUIRED_DESC"
+    class="btn-group btn-group-yesno"
+    >  
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+    <field
+    name="message_required"
+    type="radio"
+    default="0"
+    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_REQUIRED_LABEL"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_REQUIRED_DESC"
+    class="btn-group btn-group-yesno"
+    >  
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+
+
+
+
+<field type="spacer" name="desc4" label="&lt;hr/&gt; &lt;b&gt; Customized the Form Elements &lt;/b&gt;&lt;hr/&gt;" />
+
+
                 
                 
                 
-                <field
-                    name="show_email_address_label"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_LABEL_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_LABEL_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+          
                 
                 <field
                     name="email_label"
@@ -155,32 +486,11 @@
                     class="inputbox"
                 />
                 
-                <field
-                    name="email_required"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_REQUIRED_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_REQUIRED_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+         
                 
-                <field
-                    name="show_email_address"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+       
                 
-                <field
-                    name="show_name_label"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_LABEL_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_LABEL_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+        
                 
                 <field
                     name="name_label"
@@ -226,32 +536,11 @@
                     class="inputbox"
                 />
                 
-                <field
-                    name="name_required"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_REQUIRED_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_REQUIRED_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+         
                 
-                <field
-                    name="show_name"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_NAME_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+       
                 
-                <field
-                    name="show_subject_label"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_LABEL_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_LABEL_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+           
                 
                 <field
                     name="subject_label"
@@ -297,32 +586,11 @@
                     class="inputbox"
                 />
                 
-                <field
-                    name="subject_required"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_REQUIRED_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_REQUIRED_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+        
                 
-                <field
-                    name="show_subject"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SUBJECT_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+          
                 
-                <field
-                    name="show_telephone_label"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_LABEL_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_LABEL_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+        
                 
                 <field
                     name="telephone_label"
@@ -368,32 +636,11 @@
                     class="inputbox"
                 />
                 
-                <field
-                    name="telephone_required"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_REQUIRED_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_REQUIRED_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+       
                 
-                <field
-                    name="show_telephone"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_TELEPHONE_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+        
                 
-                <field
-                    name="show_message_label"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_LABEL_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_LABEL_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+            
                 
                 <field
                     name="message_label"
@@ -439,32 +686,9 @@
                     class="inputbox"
                 />
                 
-                <field
-                    name="message_required"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_REQUIRED_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_REQUIRED_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+         
                 
-                <field
-                    name="show_message"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_MESSAGE_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
-                
-                <field
-                    name="show_send_copy_to_me"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SEND_COPY_TO_ME_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_SEND_COPY_TO_ME_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+       
                 
                 
                 <field
@@ -478,24 +702,9 @@
                     class="inputbox"
                 />
                 
-                <field
-                    name="captcha_show"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CAPTCHA_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_CAPTCHA_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+        
                 
-                
-                <field
-                    name="show_reset_button"
-                    type="checkbox"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_RESET_BUTTON_SHOW_LABEL"
-                    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_RESET_BUTTON_SHOW_DESC"
-                    value="TRUE"
-                    class="inputbox"
-                />
+       
                 
                 <field
                     name="reset_button_label"
@@ -519,22 +728,50 @@
                     class="inputbox"
                 />
                 
-                <field
+      <!--           <field
                     name="email_template"
                     type="editor"
                     label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_TEMPLATE_LABEL"
                     description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_TEMPLATE_DESC"
                     filter="safehtml"
-                />
+                /> -->
+
+
+
+
             </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
             <fieldset name="mail">
 
-                    <field type="spacer" name="myspacerbasic" hr="true" />
+              <!--       <field type="spacer" name="myspacerbasic" hr="true" />
 
                     <field type="spacer" name="labelbasicadvanceemail" class="text"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_BASIC_TEMPLATE_START"/>
+                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_BASIC_TEMPLATE_START"/> -->
+
+
+<field type="spacer" name="desc5" label=" &lt;b&gt; Basic Mail Template Configurations &lt;/b&gt;&lt;hr/&gt;" />
+
+
+
 
                     <field addfieldpath="/modules/mod_innovationlanka_contact_form/assets/fields" name="title" type="Mailtemplate" label="Mail template" description=""   />
 
@@ -582,7 +819,7 @@
 
                     <field
                     name="email_template_header_color"
-                    type="text"
+                    type="color"
                     label="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_HEADER_COLOR"
                     description="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_HEADER_COLOR_DESC"
                     default="#FF2D7E"
@@ -592,7 +829,7 @@
 
                     <field
                     name="email_template_body_color"
-                    type="text"
+                    type="color"
                     label="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_BODY_COLOR"
                     description="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_BODY_COLOR_DESC"
                     default="#E6E6FA"
@@ -602,7 +839,7 @@
 
                     <field
                     name="email_template_footer_color"
-                    type="text"
+                    type="color"
                     label="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_FOOTER_COLOR"
                     description="MOD_INNOVATIONLANKA_EMAIL_TEMPLATE_XML_FOOTER_COLOR_DESC"
                     default="#FF2D7E"
@@ -611,13 +848,36 @@
                      />
 
 
-                     <field type="spacer" name="myspacer" hr="true" />
+               <field type="spacer" name="desc6" label="&lt;hr/&gt; &lt;b&gt; Advance Email Template &lt;/b&gt;&lt;hr/&gt;" />
 
-                    <field type="spacer" name="labeladvanceemail" class="text"
-                    label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADVANCE_TEMPLATE_START"
-                    />
 
-                     <field name="select_advance_email_template" type="checkbox" label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADVANCE_TEMPLATE_SELECT" value="1" default="0" />
+<!-- 
+<field type="spacer" name="labeladvanceemail" class="text"
+label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADVANCE_TEMPLATE_START"
+/> -->
+
+<!--                      <field name="select_advance_email_template" type="checkbox" label="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADVANCE_TEMPLATE_SELECT" value="1" default="0"
+/> -->
+
+    <field
+    name="select_advance_email_template"
+    type="radio"
+    default="0"
+    label="Use Advance Email Template"
+    description="MOD_INNOVATIONLANKA_CONTACT_FORM_XML_EMAIL_ADVANCE_TEMPLATE_SELECT"
+    class="btn-group btn-group-yesno"
+    >  
+    <option value="1">JYES</option>
+    <option value="0">JNO</option>
+    </field>
+
+
+
+
+
+
+
+   
 
                     <field
                         name="advance_email_template"
@@ -652,6 +912,12 @@
 
             </fieldset>
 			
+
+
+
+
+
+
             <fieldset
                 name="advanced">
                 <field
